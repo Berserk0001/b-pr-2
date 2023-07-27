@@ -1,4 +1,4 @@
-const DEFAULT_QUALITY = 10;
+const DEFAULT_QUALITY = 40;
 
 function params(req, res, next) {
   const { url, jpeg, bw, l } = req.query;
