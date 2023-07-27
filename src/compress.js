@@ -2,7 +2,7 @@ const sharp = require('sharp');
 const redirect = require('./redirect');
 
 function compress(req, res, input) {
-  const format = req.params.webp ? 'webp' : 'jpeg';
+  const format = req.params.avif ? 'avif' : 'jpeg';
   let compressionQuality = req.params.quality * 0.1;
        
   req.params.quality = Math.ceil(compressionQuality);
