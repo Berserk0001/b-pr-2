@@ -12,8 +12,7 @@ function compress(req, res, input) {
     .toFormat(format, {
       quality: req.params.quality,
       effort: 1,
-      progressive: true,
-      optimizeScans: true
+      chromaSubsampling: '4:2:0'
     })
     .toBuffer((err, output, info) => {
       if (err || !info || res.headersSent) {
